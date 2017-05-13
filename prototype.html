@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Protype</title>
+</head>
+<body>
+<h1>Protype</h1>
+<script type="text/javascript">
+	function student(fname,lname,rol,marks){
+		this.firstn = fname;
+		this.lastn = lname;
+		this.roll = rol;
+		this.m = marks;
+	}
+
+
+/*The standard way to create an object prototype is to use an object constructor function:*/	
+var s1 = new student('harshit','mahajan',16,100);
+var s2 =new student('g','m',20,200);
+
+s1.gf = "m";
+//alert(s2.gf);//undefined as gf applied directly only over s1 to apply it everywhere prototype need to be used
+//alert(s1.gf);
+//alert(s1.m);
+student.prototype.gf = "ll";
+student.prototype.fullname = function(){
+	return(this.firstn + " "+this.lastn);
+}
+alert(s1.fullname());
+
+
+</script>
+</body>
+</html>

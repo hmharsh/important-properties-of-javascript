@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Apply and call</title>
+</head>
+<body>
+<h1>Apply and call</h1>
+<script type="text/javascript">
+//after using comman function invocation techniques like method,function, constructor this is fourth and most different
+
+//using call to send values directly as 10,2 with instance ...which is here a,, this may also be null, this
+function myfunc(a,b){
+	return a*b;
+}
+var a = myfunc.call(a,10,2);
+alert(a);
+
+//using (a)pply:-(a)rray
+var arr = [10,2];
+function myfunc(a,b){
+	return a*b;
+}
+var a = myfunc.apply(a,arr);
+alert(a);
+
+</script>
+</body>
+</html>
+
+<!-- With call() or apply() you can set the value of this, and invoke a function as a new method of an existing object. -->

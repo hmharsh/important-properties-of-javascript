@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Callback</title>
+</head>
+<body>
+<h1>Callback</h1>
+<script type="text/javascript">
+window.name = "harshit";
+var a = function(){
+	alert("Finally a is called now name is :-"+window.name);
+}
+var main =function(fun){
+	window.name = "harshit mahajan";
+	fun();
+
+
+	
+}
+main(a);
+</script>
+</body>
+</html>
