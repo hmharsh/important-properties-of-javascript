@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>use strict</title>
+</head>
+<body>
+	<h1>Look Into Console for error</h1>
+<script type="text/javascript">
+
+/*various ways:http://stackoverflow.com/questions/456177/function-overloading-in-javascript-best-practices*/
+/*this will not run*/
+	(function(){
+ function findAll() {
+   // Find all users...
+  }
+
+ function findByFullName(name) {
+  // Find a user by name
+  }
+
+  function findBySurname(first, last) {
+     // Find a user by first and last name
+  }
+
+  Users.prototype.find = function find() {
+    if (arguments.length === 0)
+       return findAll.apply(this);
+
+    if (arguments.length === 1 and typeof(arguments[1]) === 'string')
+      return findByFullName.apply(this, arguments);
+
+   // by default, search using first and last name
+   return findBySurname.apply(this, arguments);
+  }
+})();
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+<!-- best way 
+
+function foo(a, b, opts) {
+
+}
+
+
+foo(1, 2, {"method":"add"});
+foo(3, 4, {"test":"equals", "bar":"tree"});
+-->

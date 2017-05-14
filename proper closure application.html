@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Protype</title>
+</head>
+<body>
+<h1>Protype</h1>
+<script type="text/javascript">
+	var Direction = (function() {
+  var _direction = 'forward'
+
+  var changeDirection = function(d) {
+            _direction = d;
+  }
+
+  return {
+            setDirection: function(d) {
+            changeDirection(d);
+            console.log(_direction);
+            }
+  };
+
+})();
+//Direction.changeDirection('backward'); //no such function
+Direction.setDirection('backward');   // Outputs: 'backward' //works properly
+console.log(Direction._direction);//undefined
+
+
+</script>
+</body>
+</html>
+
+
+<!-- Reference : http://www.infoworld.com/article/3196070/application-development/10-javascript-concepts-nodejs-programmers-must-master.html -->

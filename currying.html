@@ -1,0 +1,23 @@
+<!-- Currying is a method of making functions more flexible. With a curried function, you can pass all of the arguments that the function is expecting and get the result, or you can pass only a subset of arguments and receive a function back that waits for the rest of the arguments. A simple example of a curry is given below: -->
+<html>
+<head>
+	<title>Currying</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+****Simple
+pass a subset of those arguments and get a function back that’s waiting for the rest of the arguments. It really is that simple.
+
+
+*/
+//innerfunction is important function waiting for both parameters before execute
+	function outerfunction(fname){
+		return (function innerfunction(lname){
+			return fname+" "+lname;
+		})
+	}
+	alert(outerfunction("harshit")("mahajan"));
+</script>
+</body>
+</html>
